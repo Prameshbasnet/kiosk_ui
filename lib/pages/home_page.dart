@@ -1,4 +1,3 @@
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:kiosk_ui/component/carasoul.dart';
 
@@ -9,29 +8,49 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leadingWidth: 200,
-        toolbarHeight: 100,
-        leading: Image.network(
-          'http://110.44.121.171:2222/logo.png',
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.all(30.0),
-            child: Column(
-              children: [Text('Mon| 10:36 AM'), Text('January 1, 2024')],
-            ),
-          )
-        ],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   leadingWidth: 200,
+      //   toolbarHeight: 100,
+      //   leading: Image.network(
+      //     'http://110.44.121.171:2222/logo.png',
+      //   ),
+      //   actions: const [
+      //     Padding(
+      //       padding: EdgeInsets.all(30.0),
+      //       child: Column(
+      //         children: [Text('Mon| 10:36 AM'), Text('January 1, 2024')],
+      //       ),
+      //     )
+      //   ],
+      // ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 1),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.network(
+                      'http://110.44.121.171:2222/logo.png',
+                      height: 80,
+                    ),
+                    const Text(
+                      'Mon| 10:36 AM \n January 1, 2024',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             const Text(
               "Welcome to Kiosk Services",
               style: TextStyle(
-                color: Colors.blueAccent,
+                color: Color.fromARGB(255, 17, 58, 129),
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
               ),
@@ -92,11 +111,13 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 12,
+            ),
             // Footer(),
           ],
         ),
       ),
-    
     );
   }
 }
