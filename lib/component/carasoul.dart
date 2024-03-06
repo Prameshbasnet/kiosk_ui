@@ -30,7 +30,7 @@ class _CarasoulState extends State<Carasoul> {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(imageAssetName),
-          fit: BoxFit.cover,
+          fit: BoxFit.fitWidth,
         ),
       ),
     );
@@ -48,7 +48,7 @@ class _CarasoulState extends State<Carasoul> {
       child: CarouselSlider(
         items: imageSlider,
         options: CarouselOptions(
-          height: 400.0,
+          height: 300.0,
           enlargeCenterPage: true,
           autoPlay: true,
           aspectRatio: 10 / 5,
