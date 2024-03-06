@@ -1,6 +1,6 @@
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:kiosk_ui/component/carasoul.dart';
-import 'package:kiosk_ui/component/footer.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required String title});
@@ -92,25 +92,24 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
-            Footer(),
+            // Footer(),
           ],
         ),
       ),
+    
     );
   }
 }
 
 
-class Footer extends StatefulWidget {
-  const Footer({super.key});
+// class Footer extends StatelessWidget {
+//   const Footer({super.key});
 
-  @override
-  State<Footer> createState() => _FooterState();
-}
-
-class _FooterState extends State<Footer> {
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(items: [],);
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+      
+//     );
+    
+//   }
+// }
