@@ -34,9 +34,12 @@ class MyHomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.network(
-                      'http://110.44.121.171:2222/logo.png',
-                      height: 80,
+                    Padding(
+                      padding: const EdgeInsets.all(19.0),
+                      child: Image.network(
+                        'https://nmb.com.np/_next/image?url=%2Fimages%2Flogo.png&w=384&q=75',
+                        height: 50,
+                      ),
                     ),
                     const Text(
                       'Mon| 10:36 AM \n January 1, 2024',
@@ -112,25 +115,39 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 12,
+              height: 120,
             ),
-            // Footer(),
+            // Footer
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Image.network(
+                      'https://generaltechnology.com.np/wp-content/uploads/2020/08/GenTechLogo.png',
+                      height: 60,
+                    ),
+                  ),
+                  const Expanded(
+                    flex: 2,
+                    child: Text(
+                      'generaltechnology.com.np | 9802300007 | © Copyright 2023. All rights reserved.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 14),
+                    ),
+                  ),
+                  Expanded(
+                    child: Image.network(
+                      'https://www.elitenet.com.np/wp-content/uploads/2022/05/header-logo.png',
+                      height: 60,
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
-
-
-// class Footer extends StatelessWidget {
-//   const Footer({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-      
-//     );
-    
-//   }
-// }
