@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(
         title: 'Kiosk',
       ),
-      
     );
   }
 }

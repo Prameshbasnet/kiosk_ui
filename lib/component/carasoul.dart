@@ -44,7 +44,7 @@ class _CarasoulState extends State<Carasoul> {
       imageSlider.add(virtualimageSliderContent(images[i], context));
     }
     return Container(
-      height: 500,
+      height: 400,
       child: CarouselSlider(
         items: imageSlider,
         options: CarouselOptions(
